@@ -13,7 +13,7 @@ function SearchOrder() {
   }
 
   return (
-    <form on onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <input
         placeholder="Search order #"
         value={query}
