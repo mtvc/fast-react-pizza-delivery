@@ -2,6 +2,7 @@ import Header from './Header';
 import Loader from './Loader';
 import CartOverview from '../features/cart/CartOverview';
 import { Outlet, useNavigation } from 'react-router-dom';
+import HeroImage from './HeroImage';
 
 function AppLayout() {
   const navigation = useNavigation();
@@ -16,6 +17,7 @@ function AppLayout() {
         <main className="mx-auto max-w-3xl">
           <Outlet />
         </main>
+        {window.location.pathname === '/' ? <HeroImage /> : null}
       </div>
 
       <CartOverview />
